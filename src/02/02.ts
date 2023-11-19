@@ -13,7 +13,8 @@ type StudentAddressType = {
     city: StudentAddressCityType
 }
 
-type StudentType = {
+export type StudentType = {
+    id: number
     name: string
     age: number
     isActive: boolean
@@ -21,7 +22,8 @@ type StudentType = {
     technologies: Array<StudentTechnologiesType>
 }
 
-const student: StudentType = {
+export const student: StudentType = {
+    id: 1,
     name: "Dmitriy",
     age: 35,
     isActive: false,
