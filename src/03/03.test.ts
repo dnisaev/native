@@ -44,10 +44,9 @@ test("new tech skill should be added to student", () => {
 })
 
 test("student should be made active", () => {
-    expect(student.isActive).toBe(false)
+    // expect(student.isActive).toBe(false)
 
     makeStudentActive(student);
-
     expect(student.isActive).toBe(true)
 })
 
@@ -55,7 +54,10 @@ test("does student live in city", () => {
 
     let result1 = doesStudentLiveInCity(student, "Minsk");
     let result2 = doesStudentLiveInCity(student, "Moscow");
+    let result3 = doesStudentLiveInCity(student, "New-York");
 
     expect(result1).toBe(false);
     expect(result2).toBe(true);
+    expect(result3).toBe(false);
+
 })

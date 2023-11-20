@@ -1,11 +1,3 @@
-// export type GovernmentBuildingsAddressStreetType = {
-//     title: string
-// }
-//
-// export type GovernmentBuildingsAddressType = {
-//     street: GovernmentBuildingsAddressStreetType
-// }
-
 export type GovernmentBuildingsType = {
     type: "Hospital" | "Fire-station"
     budget: number
