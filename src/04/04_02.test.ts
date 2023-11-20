@@ -1,11 +1,13 @@
 import { CityType } from "../02/02_02";
+
 import {
     addMoneyToBudget,
     createMessage,
     repairedHouse,
     toFireStaff,
     toHireStaff
-} from "./03";
+} from "../03/03";
+import {demolishHousesOnTheStreet, getBuildingsWithStaffCountGreaterThen} from "./04_02";
 
 let city: CityType;
 
@@ -14,7 +16,7 @@ beforeEach(() => {
         title: "New York",
         houses: [
             {
-                buildedAt: 2012,
+                id: 1, buildedAt: 2012,
                 repaired: false,
                 address:
                     {
@@ -26,7 +28,7 @@ beforeEach(() => {
                     }
             },
             {
-                buildedAt: 2008,
+                id: 2, buildedAt: 2008,
                 repaired: false,
                 address:
                     {
@@ -38,7 +40,7 @@ beforeEach(() => {
                     }
             },
             {
-                buildedAt: 2020,
+                id: 3, buildedAt: 2020,
                 repaired: false,
                 address:
                     {
@@ -114,4 +116,18 @@ test("Greeting message should be correct for New York city", () => {
     const message = createMessage(city);
 
     expect(message).toBe("Hello New York citizens.")
+})
+
+test("Houses should be destroyed", () => {
+    demolishHousesOnTheStreet(city, "Happy street");
+
+    expect(city.houses.length).toBe(1);
+});
+
+test("buildings with correct staff count", () => {
+
+    let buildings = getBuildingsWithStaffCountGreaterThen(city.governmentBuildings, 500);
+
+    expect(buildings.length).toBe(1);
+    expect(buildings[0].type).toBe("Fire-station");
 })

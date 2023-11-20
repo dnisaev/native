@@ -24,10 +24,6 @@ export const addMoneyToBudget = (building: GovernmentBuildingsType, budget: numb
     building.budget += budget;
 }
 
-export const demolishHousesOnTheStreet = (city: CityType, street: string) => {
-
-}
-
 export const repairedHouse = (house: HouseType) => {
     house.repaired = true;
 }
