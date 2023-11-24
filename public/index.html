@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
     <meta
-      name="description"
-      content="Native"
+            name="description"
+            content="Native"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
     <title>Native</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+</head>
+<body>
+<div id="root"></div>
+<hr/>
+<!-- Callback Lesson
+<div>
+    <button id="btn1">1</button>
+    <button>2</button>
+    <script>
+        const deleteUserHandler = () => {
+            alert('user have been deleted');
+        };
+        const btn = document.getElementById('btn1');
+        // btn.onclick = deleteUserHandler;
+        btn.addEventListener('click', deleteUserHandler);
+    </script>
+</div>
+-->
+</body>
 </html>
